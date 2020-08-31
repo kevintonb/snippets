@@ -23,15 +23,12 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Center(
-            child: Text(
-              "All Snippets"
-            ),
+          child: Text("All Snippets"),
         ),
       ),
       body: ListView(
@@ -41,8 +38,8 @@ class _MyHomePageState extends State<MyHomePage> {
             onPressed: () => Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => CircularReveal()),
-             ),
             ),
+          ),
         ],
       ),
     );
