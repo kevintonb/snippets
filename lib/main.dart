@@ -1,3 +1,4 @@
+import 'package:experiment/sizeconfig.dart';
 import 'package:flutter/material.dart';
 import 'package:experiment/snips/CircularReveal.dart';
 
@@ -6,14 +7,16 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Home Page',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: MyHomePage(),
-    );
+    return LayoutBuilder(builder: (context, constraints) {
+      return OrientationBuilder(builder: (context, orientation) {
+        Responsive().init(constraints, orientation);
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'Flutter Demo',
+          home: MyHomePage(),
+        );
+      });
+    });
   }
 }
 
@@ -23,6 +26,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
+  var _buttonPadding = EdgeInsets.only(top: 2 * Responsive.heightMultiplier, right: 10 * Responsive.widthMultiplier, left: 10 * Responsive.widthMultiplier,);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,11 +39,15 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: ListView(
         children: [
-          MaterialButton(
-            child: Text("#27 Circular Reveal"),
-            onPressed: () => Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => CircularReveal()),
+          Padding(
+            padding: _buttonPadding,
+            child: MaterialButton(
+              child: Text("#27 Circular Reveal"),
+              color: Colors.amber,
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => CircularReveal()),
+              ),
             ),
           ),
         ],

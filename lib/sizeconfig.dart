@@ -35,8 +35,5 @@ class Responsive {
     imageSizeMultiplier = _blockSizeHorizontal;
     heightMultiplier = _blockSizeVertical;
     widthMultiplier = _blockSizeHorizontal;
-
-//    print(_blockSizeHorizontal);
-//    print(_blockSizeVertical);
   }
 }

@@ -123,3 +123,4 @@ class _CircularRevealState extends State<CircularReveal>
     );
   }
 }
+
