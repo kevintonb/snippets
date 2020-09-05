@@ -29,6 +29,8 @@ dependencies:
   flip_card: ^0.4.4
   circular_reveal_animation: ^1.1.5
   avatar_glow: ^1.2.0
+  convex_bottom_bar: ^2.4.1
+  confetti: ^0.5.4+1
 
 
 

@@ -75,11 +75,11 @@ class _MyHomePageState extends State<MyHomePage> {
           Padding(
             padding: _buttonPadding,
             child: MaterialButton(
-              child: Text("#29 Convex BottomBar"),
+              child: Text("#29 Confetti Animation"),
               color: Colors.amber,
               onPressed: () => Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => ConvexBottom()),
+                MaterialPageRoute(builder: (context) => Confetti()),
               ),
             ),
           ),
