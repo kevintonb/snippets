@@ -1,12 +1,23 @@
 import 'package:experiment/sizeconfig.dart';
+import 'package:experiment/snips/ConvexBottom.dart';
+import 'package:experiment/snips/GlowEffect.dart';
 import 'package:flutter/material.dart';
 import 'package:experiment/snips/CircularReveal.dart';
+import 'package:flutter/services.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
+
+    SystemChrome.setEnabledSystemUIOverlays([]);
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
+
     return LayoutBuilder(builder: (context, constraints) {
       return OrientationBuilder(builder: (context, orientation) {
         Responsive().init(constraints, orientation);
@@ -47,6 +58,28 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () => Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => CircularReveal()),
+              ),
+            ),
+          ),
+          Padding(
+            padding: _buttonPadding,
+            child: MaterialButton(
+              child: Text("#28 Glow Effect"),
+              color: Colors.amber,
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => GlowEffect()),
+              ),
+            ),
+          ),
+          Padding(
+            padding: _buttonPadding,
+            child: MaterialButton(
+              child: Text("#29 Convex BottomBar"),
+              color: Colors.amber,
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ConvexBottom()),
               ),
             ),
           ),

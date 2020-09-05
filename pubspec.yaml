@@ -28,6 +28,7 @@ dependencies:
   lottie: ^0.5.1
   flip_card: ^0.4.4
   circular_reveal_animation: ^1.1.5
+  avatar_glow: ^1.2.0
 
 
 
