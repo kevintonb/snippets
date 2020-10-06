@@ -1,5 +1,6 @@
 import 'package:experiment/sizeconfig.dart';
 import 'package:experiment/snips/ConvexBottom.dart';
+import 'package:experiment/snips/DataTable.dart';
 import 'package:experiment/snips/GlowEffect.dart';
 import 'package:experiment/snips/hero/home.dart';
 import 'package:flutter/material.dart';
@@ -92,6 +93,17 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () => Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => HeroHome()),
+              ),
+            ),
+          ),
+          Padding(
+            padding: _buttonPadding,
+            child: MaterialButton(
+              child: Text("#32 Data Table"),
+              color: Colors.amber,
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => DataTableExample()),
               ),
             ),
           ),
