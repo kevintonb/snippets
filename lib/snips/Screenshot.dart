@@ -1,4 +1,6 @@
 import 'dart:io';
+import 'package:image_save/image_save.dart';
+
 
 import 'package:flutter/material.dart';
 import 'package:screenshot/screenshot.dart';
@@ -83,7 +85,7 @@ class _ScreenshotWidgetState extends State<ScreenshotWidget> {
             setState(() {
               _imageFile = image;
             });
-//      final result = await ImageGallerySaver.save(image.readAsBytesSync());
+            await ImageSave.saveImage(image.readAsBytesSync(), "gif", albumName: "demo");
             print("File Saved to Gallery");
           }).catchError((onError) {
             print(onError);
@@ -93,10 +95,5 @@ class _ScreenshotWidgetState extends State<ScreenshotWidget> {
         child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
-  }
-
-  _saved(File image) async {
-//  final result = await ImageGallerySaver.save(image.readAsBytesSync());
-    print("File Saved to Gallery");
   }
 }

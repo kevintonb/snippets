@@ -32,6 +32,7 @@ dependencies:
   convex_bottom_bar: ^2.4.1
   confetti: ^0.5.4+1
   screenshot: ^0.2.0
+  image_save: ^3.1.1
 
 
 
