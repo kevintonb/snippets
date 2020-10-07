@@ -2,6 +2,7 @@ import 'package:experiment/sizeconfig.dart';
 import 'package:experiment/snips/ConvexBottom.dart';
 import 'package:experiment/snips/DataTable.dart';
 import 'package:experiment/snips/GlowEffect.dart';
+import 'package:experiment/snips/Screenshot.dart';
 import 'package:experiment/snips/hero/home.dart';
 import 'package:flutter/material.dart';
 import 'package:experiment/snips/CircularReveal.dart';
@@ -99,11 +100,22 @@ class _MyHomePageState extends State<MyHomePage> {
           Padding(
             padding: _buttonPadding,
             child: MaterialButton(
-              child: Text("#32 Data Table"),
+              child: Text("#31 Data Table"),
               color: Colors.amber,
               onPressed: () => Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => DataTableExample()),
+              ),
+            ),
+          ),
+          Padding(
+            padding: _buttonPadding,
+            child: MaterialButton(
+              child: Text("#32 Screenshot Widget"),
+              color: Colors.amber,
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ScreenshotWidget()),
               ),
             ),
           ),
