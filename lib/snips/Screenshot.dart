@@ -70,7 +70,7 @@ class _ScreenshotWidgetState extends State<ScreenshotWidget> {
  Widget build(BuildContext context) {
   return Scaffold(
    appBar: AppBar(
-    title: Text(widget.title),
+    title: Text("Title"),
    ),
    body: Container(
     child: new Center(
