@@ -31,6 +31,7 @@ dependencies:
   avatar_glow: ^1.2.0
   convex_bottom_bar: ^2.4.1
   confetti: ^0.5.4+1
+  uuid: 2.2.2
 
 
 
